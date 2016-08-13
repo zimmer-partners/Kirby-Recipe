@@ -6,6 +6,16 @@
       <h1><?= $page->title()->html() ?></h1>
       <?= $page->text()->kirbytext() ?>
     </div>
+    
+  <?php if ($page->children()->count() > 0): ?>
+    <ul class="receipts">
+      <?php foreach ($page->children() as $child): ?>
+        <li>
+          <?= $child->title()->link() ?>
+        </li>
+      <?php endforeach ?>
+    </ul>
+  <?php endif ?>
 
   </main>
 
