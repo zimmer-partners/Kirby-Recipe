@@ -9,7 +9,7 @@
     
   <?php if ($page->children()->count() > 0): ?>
     <ul class="receipts">
-      <?php foreach ($page->children() as $child): ?>
+      <?php foreach ($page->children()->visible()->sortBy('date', 'desc') as $child): ?>
         <li>
           <?= $child->title()->link() ?>
         </li>
