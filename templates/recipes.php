@@ -8,7 +8,7 @@
     </div>
     
   <?php if ($page->children()->count() > 0): ?>
-    <ul class="receipts">
+    <ul class="recipes">
       <?php foreach ($page->children()->visible()->sortBy('date', 'desc') as $child): ?>
         <li>
           <?= $child->title()->link() ?>
