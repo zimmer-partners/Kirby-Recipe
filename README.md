@@ -32,3 +32,4 @@ This plugin allows to add recipes and overview pages listing all recipes.
 # Version history
 
 - v1.0: First official version
+- v1.0.1: Renamed plugin to Recipe
