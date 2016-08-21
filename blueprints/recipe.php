@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Receipt
+title: Recipe
 pages: false
 files:
   sortable: true

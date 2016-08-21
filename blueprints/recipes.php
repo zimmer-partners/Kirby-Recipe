@@ -1,8 +1,8 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Receipts
+title: Recipes
 pages:
-  template: receipt
+  template: recipe
   num:
     mode: date
     field: date
@@ -19,19 +19,19 @@ fields:
   projects_configuration:
     label: Projects Configuration
     type: headline
-  receipt_ingridents_heading:
-    label: Receipt Ingridents Heading
+  recipe_ingridents_heading:
+    label: Recipe Ingridents Heading
     type: text
     default: Ingridents
-  receipt_preparation_heading:
-    label: Receipt Preparation Heading
+  recipe_preparation_heading:
+    label: Recipe Preparation Heading
     type: text
     default: Ingridents
-  receipt_date_label:
+  recipe_date_label:
     label: Date Label
     type: text
     default: Date
-  receipt_tags_label:
+  recipe_tags_label:
     label: Tags Label
     type: text
     default: Tags

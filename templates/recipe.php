@@ -2,9 +2,9 @@
 
 <?php $parent = $page->parent(); ?>
   
-  <?= css('/assets/plugins/receipt/css/receipts.css') ?>
+  <?= css('/assets/plugins/recipe/css/recipe.css') ?>
   
-  <main class="main receipt" role="main">
+  <main class="main recipe" role="main">
 
     <div class="text">
       <h1><?= $page->title()->html() ?></h1>
@@ -18,7 +18,7 @@
       <?php endif ?>
       
       
-      <h2><?= $parent->receipt_ingridents_heading()->html()->or('Ingridents'); ?></h2>
+      <h2><?= $parent->recipe_ingridents_heading()->html()->or('Ingridents'); ?></h2>
       <?php if ($page->ingridents()->isNotEmpty()): ?>
         <ul class="ingridents">
         <?php foreach ($page->ingridents()->toStructure() as $ingrident): ?>
@@ -29,14 +29,14 @@
         </ul>
       <?php endif ?>
       
-      <h2><?= $parent->receipt_preparation_heading()->html()->or('Preparation'); ?></h2>
+      <h2><?= $parent->recipe_preparation_heading()->html()->or('Preparation'); ?></h2>
       <?= $page->preparation()->kirbytext() ?>
       
     </div>
 
     <ul class="meta cf">
-      <li><b><?= $page->parent()->receipt_date_label()->html()->or('Date') ?>:</b> <time datetime="<?= strftime('%Y-%m-%dT%H:%M:%S', $page->date()) ?>"><?= strftime('%d.%m.%y', $page->date()) ?></time></li>
-      <li><b><?= $page->parent()->receipt_tags_label()->html()->or('Tags') ?>:</b> <?= $page->tags() ?></li>
+      <li><b><?= $page->parent()->recipe_date_label()->html()->or('Date') ?>:</b> <time datetime="<?= strftime('%Y-%m-%dT%H:%M:%S', $page->date()) ?>"><?= strftime('%d.%m.%y', $page->date()) ?></time></li>
+      <li><b><?= $page->parent()->recipe_tags_label()->html()->or('Tags') ?>:</b> <?= $page->tags() ?></li>
     </ul>
     
   </main>
